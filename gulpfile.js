@@ -20,21 +20,24 @@ const path = {
     js: 'dist/js/',
     css: 'dist/css/',
     img: 'dist/img/',
-    fonts: 'dist/fonts/'
+    fonts: 'dist/fonts/',
+    video: 'dist/video/'
   },
   src: {
     html: 'src/**/[^_]*.html',
     style: 'src/main.scss',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*',
-    js: 'src/js/**/*.js'
+    js: 'src/js/**/*.js',
+    video: 'src/video/**/*.mp4'
   },
   watch: {
     html: 'src/**/*.html',
     style: 'src/**/*.scss',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*',
-    js: 'src/js/**/*.js'
+    js: 'src/js/**/*.js',
+    video: 'src/video/**/*.mp4'
   },
   clean: './dist'
 };
@@ -46,7 +49,7 @@ const serverConfig = {
   tunnel: false,
   host: 'localhost',
   port: 9000,
-  logPrefix: "IT-academy",
+  logPrefix: "Server",
   notify: false
 };
 
@@ -79,7 +82,7 @@ const stylesBuild = () => src(path.src.style)
   .pipe(browsersync.stream());
 
 const fontsBuild = () => src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(browsersync.stream());
-
+const videoBuild = () => src(path.src.video).pipe(dest(path.dist.video)).pipe(browsersync.stream());
 const imgsBuild = () => src(path.src.img).pipe(dest(path.dist.img)).pipe(browsersync.stream());
 const jsBuild = () => src(path.src.js).pipe(dest(path.dist.js)).pipe(browsersync.stream());
 
@@ -89,6 +92,7 @@ const server = () => {
   watch(path.watch.html, httpBuild);
   watch(path.watch.style, stylesBuild);
   watch(path.src.img, imgsBuild);
+  watch(path.src.video, videoBuild);
   watch(path.src.fonts, fontsBuild);
   watch(path.src.js, jsBuild);
   
@@ -96,7 +100,7 @@ const server = () => {
 
 const build = series(
   cleanDist,
-  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild));
+  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, videoBuild, jsBuild));
 exports.start = series(build, server);
 exports.clean = series(cleanDist);
 exports.build = series(build);
