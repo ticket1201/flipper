@@ -1,4 +1,4 @@
-
+//here is code
 var videoOne = document.getElementById('bgVideo');
 var imageOne = document.getElementById('billyImg');
 play = function(){
