@@ -5,11 +5,15 @@
 body{
   margin: 0;
   height: 100vh;
+  font-family: sans-serif;
 }
 
 main{
   height: inherit;
   background: rgba(0, 0, 0, 0.8);
+  & a{
+    cursor: pointer;
+  }
 }
 
 .container{
@@ -34,9 +38,12 @@ div.background{
 }
 
 .smile{
-  position: absolute;
+  position: absolute; 
   animation: 5s linear 1s infinite alternate move;
-  @keyframes move {
+  & img{
+    width: 50vh;
+  }
+ /*  @keyframes move {
     from, 
     to {
     left: 0;
@@ -50,6 +57,31 @@ div.background{
       from {transform: rotate(0deg);}
       to {transform: rotate(360deg);}
     }
+  } */
+}
+
+.welcome{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  &__text{
+    color: white;
+  }
+
+  &__skip{
+    color: rgba(209, 209, 209, 0.8);
+  }
+
+  &__button{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    margin: 10px auto;
   }
 }
 
@@ -61,4 +93,8 @@ footer{
   & p{
     color: rgba(209, 209, 209, 0.8);
   }
+}
+
+.hide__element{
+  visibility: hidden;
 }
