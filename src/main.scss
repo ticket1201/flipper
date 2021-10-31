@@ -22,6 +22,101 @@ main{
   align-items: center;
 }
 
+.welcome{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  &__text{
+    color: white;
+    text-align: center;
+    margin: 0 15px;
+  }
+
+  &__skip{
+    color: rgba(209, 209, 209, 0.8);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__button{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    margin: 10px auto;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      transform: translate(-1px, -1px);
+    }
+    &:active{
+      transform: scale(1.05);
+    }
+  }
+}
+
+.grade{
+  position: absolute;
+  background-color: rgba(185, 185, 185, 0.9);
+  border-radius: 15px;
+  box-shadow: 15px 12px 18px 0px rgba(97, 97, 97, 1);
+  z-index: 1;
+  width: 90vw;
+  height: 90vh;
+  overflow: auto;
+  & .container{
+    flex-direction: column;
+  }
+  
+  &__title{
+    margin: 25px 35px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+  }
+
+  &__elements{
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    & img{
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+    }
+    & p{
+      margin: 0 auto;
+      font-size: 1.25rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  &__close{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    & i{
+      font-size: 2rem;
+    }
+  }
+}
+
 div.background{
   position: absolute;
   top: 0;
@@ -37,53 +132,44 @@ div.background{
   }
 }
 
+.score{
+  color: rgb(209, 209, 209);;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  & p{
+    margin: 0;
+  }
+  & img{
+    margin: 0 6px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .smile{
   position: absolute; 
-  animation: 5s linear 1s infinite alternate move;
-  & img{
-    width: 50vh;
-  }
- /*  @keyframes move {
-    from, 
-    to {
-    left: 0;
-    }
-    25%, 
-    50% {left: calc(100% - 620px);}
+  &:active{
+    transform: scale(1.05);
+ 
   }
   & img{
-    animation: 3s linear infinite rotate;
+    width: 30vw;
+    
+  } 
+}
+
+.animation-rotate{
+  animation: 3s linear infinite rotate;
     @keyframes rotate {
       from {transform: rotate(0deg);}
       to {transform: rotate(360deg);}
     }
-  } */
 }
 
-.welcome{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
-  &__text{
-    color: white;
-  }
-
-  &__skip{
-    color: rgba(209, 209, 209, 0.8);
-  }
-
-  &__button{
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
-    margin: 10px auto;
-  }
-}
 
 footer{
   width: 100%;
