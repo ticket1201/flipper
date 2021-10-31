@@ -21,7 +21,8 @@ const path = {
     css: 'dist/css/',
     img: 'dist/img/',
     fonts: 'dist/fonts/',
-    video: 'dist/video/'
+    video: 'dist/video/',
+    audio: 'dist/audio'
   },
   src: {
     html: 'src/**/[^_]*.html',
@@ -29,7 +30,8 @@ const path = {
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*',
     js: 'src/js/**/*.js',
-    video: 'src/video/**/*.mp4'
+    video: 'src/video/**/*.*',
+    audio: 'src/audio/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
@@ -37,7 +39,8 @@ const path = {
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*',
     js: 'src/js/**/*.js',
-    video: 'src/video/**/*.mp4'
+    video: 'src/video/**/*.mp4',
+    audio: 'src/audio/**/*.*'
   },
   clean: './dist'
 };
@@ -82,6 +85,7 @@ const stylesBuild = () => src(path.src.style)
   .pipe(browsersync.stream());
 
 const fontsBuild = () => src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(browsersync.stream());
+const audioBuild = () => src(path.src.audio).pipe(dest(path.dist.audio)).pipe(browsersync.stream());
 const videoBuild = () => src(path.src.video).pipe(dest(path.dist.video)).pipe(browsersync.stream());
 const imgsBuild = () => src(path.src.img).pipe(dest(path.dist.img)).pipe(browsersync.stream());
 const jsBuild = () => src(path.src.js).pipe(dest(path.dist.js)).pipe(browsersync.stream());
@@ -92,6 +96,7 @@ const server = () => {
   watch(path.watch.html, httpBuild);
   watch(path.watch.style, stylesBuild);
   watch(path.src.img, imgsBuild);
+  watch(path.src.audio, audioBuild);
   watch(path.src.video, videoBuild);
   watch(path.src.fonts, fontsBuild);
   watch(path.src.js, jsBuild);
@@ -100,7 +105,7 @@ const server = () => {
 
 const build = series(
   cleanDist,
-  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, videoBuild, jsBuild));
+  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, audioBuild, videoBuild, jsBuild));
 exports.start = series(build, server);
 exports.clean = series(cleanDist);
 exports.build = series(build);
