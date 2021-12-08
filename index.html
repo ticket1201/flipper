@@ -5,18 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/main.css">
     <title>Right WebSite</title>
+    <link rel="icon" href="./img/gasm.png" type="image/png">
     <script src="./js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/b1cf813757.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZBM0H9JDH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DZBM0H9JDH');
+    </script>
   </head>
   <body>
+    
     <main class="container">
+      <div class="welcome" id="startWindow">
+        <p class="welcome__text">
+          Hey, welcome to GrachiClicker. Please sign in to save your progress.
+        </p>
+        <audio src="./audio/Without further interruption.mp3" id="letsGo"></audio>
+        <button class="welcome__button" id="welcome__btn" disabled>Sign in</button>
+        <a class="welcome__skip" id="welcome__skp">Continue without sign in.</a>
+      </div>
+      <a class="score" id="scoreBtn">
+        <p class="score__count" id="countOfClicks">
+          0
+        </p>
+        <img src="./img/gasm.png" alt="score count">
+      </a>
+      <div class="grade hide__element" id="grade">
+        <div class="container">
+          <p class="grade__title">There is grade window. So, if you'll be nice 
+            slave you become a boss of the gym.
+          </p>
+          <div class="grade__elements" id="grade_lvl1">
+            <div class="grade__item unavailable">
+              <img src="./img/sleeper1.webp" alt="lvl1">
+              <p>Resident sleeper</p>
+            </div>
+            <div class="grade__item unavailable" id="grade_lvl2">
+              <img src="./img/mmm.png" alt="lvl2">
+              <p>Mmmmm...</p>
+            </div>
+            <div class="grade__item unavailable" id="grade_lvl3">
+              <img src="./img/sorry.png" alt="lvl3">
+              <p>There is nothing to shame about</p>
+            </div>
+            <div class="grade__item unavailable" id="grade_lvl4">
+              <img src="./img/mladshii.webp" alt="lvl4">
+              <p>Mladshii leatherman</p>
+            </div>
+            <div class="grade__item unavailable" id="grade_lvl5">
+              <img src="./img/leatherman.webp" alt="lvl5">
+              <p>No, fuck you leatherman</p>
+            </div>
+            <div class="grade__item unavailable" id="grade_lvl6">
+              <img src="./img/milos.png" alt="lvl6">
+              <p>Flex like a boss</p>
+            </div>
+          </div>
+          <a class="grade__close" id="grade__close">
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+      </div>
+      <a class="smile" id="billyImg">  
+        <img src="./img/5.webp"  alt="">
+        <div class="pop__window hide__element" id="popWindow"></div>
+      </a>
+      <!-- <div class="amount__hp">
+        <div class="amount__inner">
+
+        </div>  
+      </div> -->
+
       <div class="background">
         <video id="bgVideo">
-           <source src="./video/right.mp4">
+           <source src="/video/right.mp4">
         </video>
       </div>
-      <a class="smile" id="billyImg">
-        <img src="./img/5.webp"  alt="">
-      </a>
+     
+   
     </main>
     <footer>
       <p>Right version of this website is cuming soon &copy;</p>
