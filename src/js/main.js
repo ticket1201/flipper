@@ -11,18 +11,53 @@ let getSignInInfo = function(){
 signInBtn.addEventListener('click', getSignInInfo)
 skipBtn.addEventListener('click', getSignInInfo)
 
-//getClicks count
+
+//fix div to mouse
 var imageOne = document.getElementById('billyImg');
+var popWindow = document.getElementById('popWindow');
+let getVisible = function(){
+    popWindow.classList.add('hide__element');
+    popWindow.classList.remove('animation-slide-top');
+
+}
+document.getElementById('billyImg').onmouseup = function(event){
+   
+    popWindow.style.top = `${event.offsetY - 30}px`;
+    popWindow.style.left = `${event.offsetX - 5}px`;
+    popWindow.textContent = clickValue;
+    popWindow.classList.remove('hide__element');
+    popWindow.classList.add('animation-slide-top');
+
+    setTimeout(getVisible, 300);
+}
+
+
+
+
+
+
+//getClicks count
+
 const countText = document.getElementById('countOfClicks');
 let countOfClicks = 0;
-let clickValue = 1;
+var clickValue = 1;
 function getClicks(){
-    imageOne.classList.add('animation-rotate')
     countOfClicks+=clickValue;
     countText.textContent = countOfClicks;
 };
 
 imageOne.addEventListener('click', getClicks);
+
+//play video after click on img
+
+var videoOne = document.getElementById('bgVideo');
+
+play = function(){
+    videoOne.volume = 0.5;
+    videoOne.play();
+}
+imageOne.addEventListener("click", play); 
+
 //open points window
 var scoreBtn = document.getElementById('scoreBtn');
 var gradeWindow = document.getElementById('grade')
@@ -38,12 +73,3 @@ function closeGradeWindow(){
     gradeWindow.classList.add('hide__element');
 }
 gradeCloseBnt.addEventListener('click', closeGradeWindow);
-
-//play video after click on img
-var videoOne = document.getElementById('bgVideo');
-
-play = function(){
-    videoOne.volume = 0.5;
-    videoOne.play();
-}
-imageOne.addEventListener("click", play);

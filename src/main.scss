@@ -1,11 +1,14 @@
 /* body * {
   outline: 1px solid lightgrey;
-} */
-
+} 
+ */
+ 
 body{
   margin: 0;
   height: 100vh;
   font-family: sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
 }
 
 main{
@@ -62,10 +65,10 @@ main{
 
 .grade{
   position: absolute;
-  background-color: rgba(185, 185, 185, 0.9);
+  background-color: rgba(230, 228, 228, .95);
   border-radius: 15px;
   box-shadow: 15px 12px 18px 0px rgba(97, 97, 97, 1);
-  z-index: 1;
+  z-index: 10;
   width: 90vw;
   height: 90vh;
   overflow: auto;
@@ -77,6 +80,7 @@ main{
     margin: 25px 35px;
     font-size: 1.5rem;
     font-weight: bold;
+    text-transform: uppercase;
     color: rgb(49, 49, 49);
   }
 
@@ -94,10 +98,12 @@ main{
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
+
     & img{
       width: 300px;
       height: 300px;
       margin: 10px;
+      
     }
     & p{
       margin: 0 auto;
@@ -123,7 +129,7 @@ div.background{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -10;
   & video{
     display: block;
     width: 100%;
@@ -151,24 +157,61 @@ div.background{
 }
 
 .smile{
+  display: block;
   position: absolute; 
+  width: 30vw;
+  height: 30vw;
+  z-index: 1;
   &:active{
     transform: scale(1.05);
- 
+    
   }
   & img{
-    width: 30vw;
-    
+    cursor: pointer;
+    width: inherit;
+    height: 100%;
+    -webkit-user-drag: none;
+
   } 
+  
 }
 
-.animation-rotate{
-  animation: 3s linear infinite rotate;
-    @keyframes rotate {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(360deg);}
-    }
+.pop__window{
+  position: absolute;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: cursive;
+  color: rgb(216, 27, 27);
+  
+
 }
+
+.animation-slide-top{
+  animation: slide-top 0.2s linear forwards;
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+
+.amount__hp{
+  position: absolute;
+  height: 36vw;
+  width: 36vw;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 35px solid rgba(0, 174, 255, 0.699);
+  box-shadow: 8px 8px 20px -3px rgba(165, 165, 165, 0.8);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
 
 
 footer{
@@ -183,4 +226,8 @@ footer{
 
 .hide__element{
   visibility: hidden;
+}
+
+.unavailable{
+  filter: opacity(0.8) grayscale(1);
 }

@@ -8,6 +8,15 @@
     <link rel="icon" href="./img/gasm.png" type="image/png">
     <script src="./js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/b1cf813757.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZBM0H9JDH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DZBM0H9JDH');
+    </script>
   </head>
   <body>
     
@@ -16,7 +25,7 @@
         <p class="welcome__text">
           Hey, welcome to GrachiClicker. Please sign in to save your progress.
         </p>
-        <audio src="./audio/letsgo.mp3" id="letsGo"></audio>
+        <audio src="./audio/Without further interruption.mp3" id="letsGo"></audio>
         <button class="welcome__button" id="welcome__btn" disabled>Sign in</button>
         <a class="welcome__skip" id="welcome__skp">Continue without sign in.</a>
       </div>
@@ -31,28 +40,28 @@
           <p class="grade__title">There is grade window. So, if you'll be nice 
             slave you become a boss of the gym.
           </p>
-          <div class="grade__elements">
-            <div class="grade__item">
+          <div class="grade__elements" id="grade_lvl1">
+            <div class="grade__item unavailable">
               <img src="./img/sleeper1.webp" alt="lvl1">
               <p>Resident sleeper</p>
             </div>
-            <div class="grade__item">
+            <div class="grade__item unavailable" id="grade_lvl2">
               <img src="./img/mmm.png" alt="lvl2">
               <p>Mmmmm...</p>
             </div>
-            <div class="grade__item">
+            <div class="grade__item unavailable" id="grade_lvl3">
               <img src="./img/sorry.png" alt="lvl3">
               <p>There is nothing to shame about</p>
             </div>
-            <div class="grade__item">
+            <div class="grade__item unavailable" id="grade_lvl4">
               <img src="./img/mladshii.webp" alt="lvl4">
               <p>Mladshii leatherman</p>
             </div>
-            <div class="grade__item">
+            <div class="grade__item unavailable" id="grade_lvl5">
               <img src="./img/leatherman.webp" alt="lvl5">
               <p>No, fuck you leatherman</p>
             </div>
-            <div class="grade__item">
+            <div class="grade__item unavailable" id="grade_lvl6">
               <img src="./img/milos.png" alt="lvl6">
               <p>Flex like a boss</p>
             </div>
@@ -62,9 +71,16 @@
           </a>
         </div>
       </div>
-      <a class="smile" id="billyImg">
+      <a class="smile" id="billyImg">  
         <img src="./img/5.webp"  alt="">
+        <div class="pop__window hide__element" id="popWindow"></div>
       </a>
+      <!-- <div class="amount__hp">
+        <div class="amount__inner">
+
+        </div>  
+      </div> -->
+
       <div class="background">
         <video id="bgVideo">
            <source src="/video/right.mp4">
