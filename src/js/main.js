@@ -58,18 +58,30 @@ play = function(){
 }
 imageOne.addEventListener("click", play); 
 
+//progressbar
+function progressUpdate() {
+	// Устанавливаем позицию воспроизведения
+    var positionBar = document.getElementById("positionBar");
+    positionBar.style.width = (videoOne.currentTime / videoOne.duration * 100)  + "%";
+	
+  }
+
+
 //open points window
 var scoreBtn = document.getElementById('scoreBtn');
-var gradeWindow = document.getElementById('grade')
+var gradeWindow = document.getElementById('grade');
+var gradeSound = document.getElementById('scoreSound');
 function openGradeWindow(){
-    gradeWindow.classList.remove('hide__element')
+    gradeWindow.classList.remove('hide__element');
+    gradeSound.play();
 }
 scoreBtn.addEventListener('click', openGradeWindow)
 
 //close points window
 
-var gradeCloseBnt = document.getElementById('grade__close');
+var gradeCloseBtn = document.getElementById('grade__close');
 function closeGradeWindow(){
     gradeWindow.classList.add('hide__element');
+    gradeSound.play();
 }
-gradeCloseBnt.addEventListener('click', closeGradeWindow);
+gradeCloseBtn.addEventListener('click', closeGradeWindow);
