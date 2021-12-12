@@ -1,6 +1,7 @@
-body * {
-  outline: 1px solid lightgrey; }
-
+/*  body * {
+  outline: 1px solid lightgrey;
+} 
+ */
 body {
   margin: 0;
   height: 100vh;
