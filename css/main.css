@@ -1,9 +1,14 @@
+/*  body * {
+  outline: 1px solid lightgrey;
+} 
+ */
 body {
   margin: 0;
   height: 100vh;
   font-family: sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  user-select: none; }
+  user-select: none;
+  touch-action: none; }
 
 main {
   height: inherit;
@@ -47,6 +52,32 @@ main {
       -webkit-transform: scale(1.05);
       transform: scale(1.05); }
 
+.donate {
+  position: absolute;
+  bottom: 1%;
+  left: 2%;
+  display: flex;
+  height: 32px;
+  background-color: #f8f8f8;
+  align-items: center;
+  text-decoration: none; }
+  .donate__logo {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px; }
+  .donate__text {
+    height: inherit;
+    flex-grow: 1;
+    background-color: #ffdb4d;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .donate__text p {
+      color: #000;
+      font-size: 1.125rem;
+      margin: 0 20px; }
+
 .grade {
   position: absolute;
   background-color: rgba(230, 228, 228, 0.95);
@@ -67,6 +98,9 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     color: #313131; }
+    @media screen and (max-width: 410px) {
+      .grade__title {
+        font-size: 1rem; } }
   .grade__elements {
     padding: 10px;
     display: flex;
@@ -77,16 +111,24 @@ main {
     flex-direction: column;
     justify-content: center;
     margin: 0 10px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-align: center; }
     .grade__item img {
       width: 300px;
       height: 300px;
       margin: 10px; }
+      @media screen and (max-width: 410px) {
+        .grade__item img {
+          width: 200px;
+          height: 200px; } }
     .grade__item p {
       margin: 0 auto;
       font-size: 1.25rem;
       font-weight: bold;
       font-style: italic; }
+      @media screen and (max-width: 410px) {
+        .grade__item p {
+          width: 200px; } }
   .grade__close {
     position: absolute;
     right: 5%;
@@ -162,12 +204,17 @@ div.background {
 footer {
   width: 100%;
   height: 50px;
-  text-align: center;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   footer p {
     z-index: 1;
     color: rgba(209, 209, 209, 0.8); }
+    @media screen and (max-width: 350px) {
+      footer p {
+        font-size: 0.85rem; } }
 
 .barContainer {
   width: 100%;
