@@ -22,9 +22,8 @@ let getVisible = function(){
 }
 document.getElementById('billyImg').onmouseup = function(event){
    
-    popWindow.style.top = `${event.offsetY - 30}px`;
-    popWindow.style.left = `${event.offsetX - 5}px`;
-    popWindow.textContent = clickValue;
+    popWindow.style.top = `${event.offsetY - 50}px`;
+    popWindow.style.left = `${event.offsetX - 20}px`;
     popWindow.classList.remove('hide__element');
     popWindow.classList.add('animation-slide-top');
 
