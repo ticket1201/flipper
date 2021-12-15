@@ -30,7 +30,7 @@
         <button class="welcome__button" id="welcome__btn" disabled>Sign in</button>
         <a class="welcome__skip" id="welcome__skp">Continue without sign in</a>
         <audio src="./audio/Without_further.mp3" id="letsGo"></audio>
-        <a class="donate" href="https://sobe.ru/na/flipper_cam" alt="donate">
+        <a class="donate" href="https://sobe.ru/na/flipper_cam" target="_blank" alt="donate">
           <div class="donate__logo">
             <img src="./img/ym.svg" alt="donate logo">
           </div>
@@ -41,7 +41,7 @@
         <p class="score__count" id="countOfClicks">
           0
         </p>
-        <img src="./img/gasm.png" alt="score count">
+        <img src="./img/gasm.webp" alt="score count">
         <audio src="./audio/Yes sir.mp3" id="scoreSound"></audio>
       </a>
       <div class="grade hide__element" id="grade">
@@ -58,11 +58,11 @@
               <p>Resident sleeper</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl2">
-              <img src="./img/mmm.png" alt="lvl2">
+              <img src="./img/mmm.webp" alt="lvl2">
               <p>Mmmmm...</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl3">
-              <img src="./img/sorry.png" alt="lvl3">
+              <img src="./img/sorry.webp" alt="lvl3">
               <p>There is nothing to shame about</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl4">
@@ -74,7 +74,7 @@
               <p>No, fuck you leatherman</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl6">
-              <img src="./img/milos.png" alt="lvl6">
+              <img src="./img/milos.webp" alt="lvl6">
               <p>Flex like a boss</p>
             </div>
           </div>
@@ -83,11 +83,11 @@
       </div>
       <a class="smile" id="billyImg">  
         <img src="./img/5.webp"  alt="">
-        <div class="pop__window hide__element" id="popWindow"></div>
+        <img class="pop__window hide__element" id="popWindow" src="./img/gasm.webp"></img>
       </a>
       <div class="background">
-        <video id="bgVideo" onTimeUpdate="progressUpdate()" playsinline>
-           <source src="/video/right.mp4">
+        <video id="bgVideo" onTimeUpdate="progressUpdate()" playsinline preload="metadata">
+           <source src="/video/feel_good.mp4">
         </video>
       </div>
       <div class="barContainer"> 
