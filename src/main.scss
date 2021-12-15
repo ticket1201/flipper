@@ -74,6 +74,7 @@ main{
   display: flex;
   height: 32px;
   background-color: #f8f8f8;
+  opacity: 0.5;
   align-items: center;
   text-decoration: none;
   &__logo{
@@ -227,18 +228,15 @@ div.background{
     -webkit-user-drag: none;
 
   } 
+  & .pop__window{
+    position: absolute;
+    width: 35px;
+    height: 35px;
   
+  }
 }
 
-.pop__window{
-  position: absolute;
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-family: cursive;
-  color: rgb(216, 27, 27);
-  
 
-}
 
 .animation-slide-top{
   animation: slide-top 0.2s linear forwards;
