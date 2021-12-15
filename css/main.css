@@ -59,6 +59,7 @@ main {
   display: flex;
   height: 32px;
   background-color: #f8f8f8;
+  opacity: 0.5;
   align-items: center;
   text-decoration: none; }
   .donate__logo {
@@ -182,13 +183,10 @@ div.background {
     width: inherit;
     height: 100%;
     -webkit-user-drag: none; }
-
-.pop__window {
-  position: absolute;
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-family: cursive;
-  color: #d81b1b; }
+  .smile .pop__window {
+    position: absolute;
+    width: 35px;
+    height: 35px; }
 
 .animation-slide-top {
   animation: slide-top 0.2s linear forwards; }
