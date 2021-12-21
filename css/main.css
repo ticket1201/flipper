@@ -2,7 +2,7 @@
   outline: 1px solid lightgrey;
 } 
  */
-body {
+body, html {
   margin: 0;
   height: 100vh;
   font-family: sans-serif;
@@ -131,9 +131,13 @@ main {
         .grade__item p {
           width: 200px; } }
   .grade__close {
-    position: absolute;
-    right: 5%;
-    top: 5%; }
+    position: fixed;
+    right: 7%;
+    top: 8%; }
+    @media screen and (max-width: 1210px) {
+      .grade__close {
+        right: 9%;
+        top: 8%; } }
     .grade__close i {
       font-size: 2rem; }
 
@@ -168,21 +172,37 @@ div.background {
 .smile {
   display: block;
   position: absolute;
-  width: 30vw;
-  height: 30vw;
-  z-index: 1; }
+  width: 15vw;
+  height: 15vw;
+  z-index: 1;
+  top: 0;
+  left: 0%; }
   @media screen and (max-width: 1000px) {
     .smile {
-      width: 50vw;
-      height: 50vw; } }
-  .smile:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-  .smile img {
+      width: 30vw;
+      height: 30vw; } }
+  .smile__spin {
     cursor: pointer;
     width: inherit;
     height: 100%;
-    -webkit-user-drag: none; }
+    -webkit-user-drag: none;
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear; }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+    .smile__spin:active {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
   .smile .pop__window {
     position: absolute;
     width: 35px;
@@ -235,7 +255,9 @@ footer {
   height: 200px; }
 
 .hide__element {
-  visibility: hidden; }
+  z-index: -10;
+  visibility: hidden;
+  pointer-events: none; }
 
 .unavailable {
   filter: opacity(0.8) grayscale(1); }
