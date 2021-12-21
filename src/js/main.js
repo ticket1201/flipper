@@ -58,14 +58,14 @@ function RandomObjectMover(obj, container) {
 	this.$object = obj;
   this.$container = container;
   this.container_is_window = container === window;
-  
-  if(this.$container.clientHeight < this.$container.clientWidth){
+  this.pixels_per_second = 300;
+ /*  if(this.$container.clientHeight < this.$container.clientWidth){
     this.pixels_per_second = this.$container.clientHeight / 2;
   }
   else{
     this.pixels_per_second = this.$container.clientWidth / 2;
   }
-  
+   */
   this.current_position = { x: 0, y: 0 }; 
   this.is_running = false;
 
