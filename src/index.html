@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.scss">
     <title>Right WebSite</title>
-    <link rel="icon" href="./img/gasm.png" type="image/png">
+    <link rel="icon" href="./img/gasm.webp" type="image/png">
     <script src="./js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/b1cf813757.js" crossorigin="anonymous"></script>
     <!-- Google Ads -->
@@ -22,7 +22,7 @@
     </script>
   </head>
   <body> 
-    <main class="container">
+    <main class="container" id="mainContainer">
       <div class="welcome" id="startWindow">
         <p class="welcome__text">
           Hey, welcome to GachiClicker. Please sign in to save your progress
@@ -82,12 +82,12 @@
         </div>
       </div>
       <a class="smile" id="billyImg">  
-        <img src="./img/5.webp"  alt="">
+        <img src="./img/5.webp"  alt="" class="smile__spin">
         <img class="pop__window hide__element" id="popWindow" src="./img/gasm.webp"></img>
       </a>
       <div class="background">
-        <video id="bgVideo" onTimeUpdate="progressUpdate()" playsinline preload="metadata">
-           <source src="/video/feel_good.mp4">
+        <video id="bgVideo" onTimeUpdate="progressUpdate()" playsinline preload="metadata" poster="./img/doom_van.webp">
+           <source src="/video/right.mp4">
         </video>
       </div>
       <div class="barContainer"> 
