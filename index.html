@@ -30,12 +30,12 @@
         <button class="welcome__button" id="welcome__btn" disabled>Sign in</button>
         <a class="welcome__skip" id="welcome__skp">Continue without sign in</a>
         <audio src="./audio/Without_further.mp3" id="letsGo"></audio>
-        <a class="donate" href="https://sobe.ru/na/flipper_cam" target="_blank" alt="donate">
+        <!-- <a class="donate" href="https://sobe.ru/na/flipper_cam" target="_blank" alt="donate">
           <div class="donate__logo">
             <img src="./img/ym.svg" alt="donate logo">
           </div>
           <div class="donate__text"><p>Donate</p></div>
-        </a>
+        </a> -->
       </div>
       <a class="score" id="scoreBtn">
         <p class="score__count" id="countOfClicks">
@@ -54,27 +54,28 @@
           </a>
           <div class="grade__elements" >
             <div class="grade__item unavailable" id="grade_lvl1">
-              <img src="./img/sleeper1.webp" alt="lvl1">
+              <img src="./img/sleeper1.webp" class='grade__image' alt="lvl1">
+              <audio src="./audio/letsgo.mp3"></audio>
               <p>Resident sleeper</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl2">
-              <img src="./img/mmm.webp" alt="lvl2">
+              <img src="./img/mmm.webp" class='grade__image' alt="lvl2">
               <p>Mmmmm...</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl3">
-              <img src="./img/sorry.webp" alt="lvl3">
+              <img src="./img/sorry.webp" class='grade__image' alt="lvl3">
               <p>There is nothing to shame about</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl4">
-              <img src="./img/mladshii.webp" alt="lvl4">
+              <img src="./img/mladshii.webp" class='grade_image' alt="lvl4">
               <p>Mladshii leatherman</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl5">
-              <img src="./img/leatherman.webp" alt="lvl5">
+              <img src="./img/leatherman.webp" class='grade__image' alt="lvl5">
               <p>No, fuck you leatherman</p>
             </div>
             <div class="grade__item unavailable" id="grade_lvl6">
-              <img src="./img/milos.webp" alt="lvl6">
+              <img src="./img/milos.webp" class='grade__image' alt="lvl6">
               <p>Flex like a boss</p>
             </div>
           </div>
@@ -82,7 +83,7 @@
         </div>
       </div>
       <a class="smile" id="billyImg">  
-        <img src="./img/5.webp"  alt="" class="smile__spin">
+        <img src="./img/5.webp"  alt="" class="smile__spin" id="smile__spin">
         <img class="pop__window hide__element" id="popWindow" src="./img/gasm.webp"></img>
       </a>
       <div class="background">
