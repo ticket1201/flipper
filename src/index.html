@@ -25,7 +25,11 @@
     <main class="container" id="mainContainer">
       <div class="welcome" id="startWindow">
         <p class="welcome__text">
-          Hey, welcome to GachiClicker. Please sign in to save your progress
+         <span>Hey, welcome to GachiClicker. Please sign in to save your progress.</span> 
+         <span>To become a boss, you have to defeat everyone on your path.</span>
+         <span>In the right corner you can find a grade menu.</span>  
+         <span>Each new character you choose improves your strength.</span>  
+         <span>Be brave, be quick do what you got! Click like a boss of the gym!</span>  
         </p>
         <button class="welcome__button" id="welcome__btn" disabled>Sign in</button>
         <a class="welcome__skip" id="welcome__skp">Continue without sign in</a>
@@ -44,44 +48,7 @@
         <img src="./img/gasm.webp" alt="score count">
         <audio src="./audio/Yes sir.mp3" id="scoreSound"></audio>
       </a>
-      <div class="grade hide__element" id="grade">
-        <div class="container">
-          <p class="grade__title">There is grade window. So, if you'll be nice 
-            slave you become a boss of the gym.
-          </p>
-          <a class="grade__close" id="grade__close">
-            <i class="fas fa-times"></i>
-          </a>
-          <div class="grade__elements" >
-            <div class="grade__item unavailable" id="grade_lvl1">
-              <img src="./img/sleeper1.webp" class='grade__image' alt="lvl1">
-              <audio src="./audio/letsgo.mp3"></audio>
-              <p>Resident sleeper</p>
-            </div>
-            <div class="grade__item unavailable" id="grade_lvl2">
-              <img src="./img/mmm.webp" class='grade__image' alt="lvl2">
-              <p>Mmmmm...</p>
-            </div>
-            <div class="grade__item unavailable" id="grade_lvl3">
-              <img src="./img/sorry.webp" class='grade__image' alt="lvl3">
-              <p>There is nothing to shame about</p>
-            </div>
-            <div class="grade__item unavailable" id="grade_lvl4">
-              <img src="./img/mladshii.webp" class='grade_image' alt="lvl4">
-              <p>Mladshii leatherman</p>
-            </div>
-            <div class="grade__item unavailable" id="grade_lvl5">
-              <img src="./img/leatherman.webp" class='grade__image' alt="lvl5">
-              <p>No, fuck you leatherman</p>
-            </div>
-            <div class="grade__item unavailable" id="grade_lvl6">
-              <img src="./img/milos.webp" class='grade__image' alt="lvl6">
-              <p>Flex like a boss</p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
+      @@include('./partials/grade/_grade.html')
       <a class="smile" id="billyImg">  
         <img src="./img/5.webp"  alt="" class="smile__spin" id="smile__spin">
         <img class="pop__window hide__element" id="popWindow" src="./img/gasm.webp"></img>
