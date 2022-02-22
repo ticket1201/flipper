@@ -1,7 +1,10 @@
+@import './partials/grade/grade.scss';
+
 /*  body * {
   outline: 1px solid lightgrey;
 } 
  */
+
 
 body, html{
   margin: 0;
@@ -40,6 +43,12 @@ main{
     color: white;
     text-align: center;
     margin: 0 15px;
+    & span:first-child{
+      margin-bottom: 1rem;
+    }
+    & span{
+      display: block;
+    }
   }
 
   &__skip{
@@ -100,85 +109,6 @@ main{
 }
 
 
-.grade{
-  position: absolute;
-  background-color: rgba(230, 228, 228, .95);
-  border-radius: 15px;
-  box-shadow: 15px 12px 18px 0px rgba(97, 97, 97, 1);
-  z-index: 10;
-  width: 90vw;
-  height: 90vh;
-  overflow: auto;
-  & .container{
-    flex-direction: column;
-    padding: 10px;
-
-  }
-  
-  &__title{
-    width: 80%;
-    text-align: center;
-    margin: 25px 35px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: rgb(49, 49, 49);
-    @media screen and (max-width:410px) {
-      font-size: 1rem;
-    }
-  }
-
-  &__elements{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  &__item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin:0 10px;
-    cursor:pointer;
-    text-align: center;
-    & img{
-      width: 300px;
-      height: 300px;
-      margin: 10px;
-      @media screen and (max-width:410px) {
-        width: 200px;
-        height: 200px;
-      }
-      
-    }
-    & p{
-      margin: 0 auto;
-      font-size: 1.25rem;
-      font-weight: bold;
-      font-style: italic;
-      @media screen and (max-width:410px) {
-        width: 200px;
-      }
-    }
-  }
-
-  &__close{
-    position: fixed;
-    right: 7%;
-    top: 8%;
-    
-    @media screen and (max-width:1210px) {
-      right: 9%;
-      top: 8%;
-    }
-
-    & i{
-      font-size: 2rem;
-    }
-  }
-}
-
 div.background{
   position: absolute;
   top: 0;
@@ -215,17 +145,17 @@ div.background{
 .smile{
   display: block;
   position: absolute; 
-  width: 15vw;
-  height: 15vw;
+  width: 23vh;
+  height: 23vh;
   z-index: 1;
   top: 0;
   left: 0%;
   
 
-  @media screen and (max-width:1000px) {
-    width: 30vw;
-    height: 30vw;
-  } 
+ /*  @media screen and (max-width:1000px) {
+    width: 20vh;
+    height: 20vh;
+  }  */
 
   &__spin{
     cursor: pointer;
