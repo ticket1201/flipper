@@ -195,43 +195,43 @@ let gradeElements = document.querySelector('.grade__elements');
 let gradeItems = {
   lvl1:{
     item: document.getElementById('grade_lvl1'),
-    audio_url: '/audio/AH.mp3',
-    video_url: '/video/feel_good.mp4',
+    audio_url: './audio/AH.mp3',
+    video_url: './video/feel_good.mp4',
     clickValue: 2
   },
 
   lvl2:{
     item: document.getElementById('grade_lvl2'),
-    audio_url: '/audio/Mmm.mp3',
-    video_url: '/video/zashumel.mp4',
+    audio_url: './audio/Mmm.mp3',
+    video_url: './video/zashumel.mp4',
     clickValue: 5
   },
 
   lvl3:{
     item: document.getElementById('grade_lvl3'),
-    audio_url: '/audio/nothing.mp3',
-    video_url: '/video/malii_povzdoslel.mp4',
+    audio_url: './audio/nothing.mp3',
+    video_url: './video/malii_povzdoslel.mp4',
     clickValue: 10
   },
 
   lvl4:{
     item: document.getElementById('grade_lvl4'),
-    audio_url: '/audio/Fisting is 300.mp3',
-    video_url: '/video/mladshii.mp4',
+    audio_url: './audio/Fisting is 300.mp3',
+    video_url: './video/mladshii.mp4',
     clickValue: 20
   },
 
   lvl5:{
     item: document.getElementById('grade_lvl5'),
-    audio_url: '/audio/Fuck_you_leather_man.mp3',
-    video_url: '/video/NILETTO.mp4',
+    audio_url: './audio/Fuck_you_leather_man.mp3',
+    video_url: './video/NILETTO.mp4',
     clickValue: 50
   },
 
   lvl6:{
     item: document.getElementById('grade_lvl6'),
-    audio_url: '/audio/Boss_of_this_gym.mp3',
-    video_url: '/video/king.mp4',
+    audio_url: './audio/Boss_of_this_gym.mp3',
+    video_url: './video/king.mp4',
     clickValue: 100
   }
 }
